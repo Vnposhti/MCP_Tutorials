@@ -21,7 +21,7 @@ The key idea is to **standardize the way tools are defined and invoked**, regard
 ---
 
 ## 🏗️ MCP Architecture Components
-
+image.png
 
 ### ✅ MCP Host
 An environment (often a server or local machine) that serves or executes the tools.
