@@ -21,8 +21,7 @@ The key idea is to **standardize the way tools are defined and invoked**, regard
 ---
 
 ## 🏗️ MCP Architecture Components
-
-mcp_architecture.png
+image.png
 
 ### ✅ MCP Host
 An environment (often a server or local machine) that serves or executes the tools.
@@ -53,9 +52,9 @@ Defines how messages (tool invocation requests/responses) are sent between clien
                         +------------------+
                         | MultiServerMCP   |
                         +------------------+
-                        /              \\
+                         /              \\
                 (stdio/local)         (HTTP/SSE)
-                mathserver.py       search.py
+                mathserver.py          search.py
 
 - `mathserver.py`: Implements math tools and communicates over **stdio**
 - `search.py`: Implements search tools and serves via **streamable HTTP**
