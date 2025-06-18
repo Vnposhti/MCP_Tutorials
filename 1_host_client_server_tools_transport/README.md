@@ -1,4 +1,4 @@
-# 🤖 MCP (Multi-Chain Protocol) Agent Demo with LangChain, Math, and Search Tools
+# 🤖 MCP (Model Context Protocol) Agent Demo with LangChain, Math, and Search Tools
 
 This project demonstrates how to build an **MCP-powered Agent** that can:
 - 🧠 Perform arithmetic operations via a local `mathserver`
@@ -11,7 +11,7 @@ But more importantly, it explains the **underlying architecture of MCP**, the ty
 
 ## 📘 What is MCP?
 
-**MCP (Multi-Chain Protocol)** is a specification for building interoperable toolchains that agents can communicate with across local or remote environments. It was introduced by LangChain to help agents access tools that may be hosted:
+**MCP (Model Context Protocol)** is a specification for building interoperable toolchains that agents can communicate with across local or remote environments. It was introduced by LangChain to help agents access tools that may be hosted:
 - In other processes
 - On different machines
 - Across different protocols
@@ -44,18 +44,18 @@ Defines how messages (tool invocation requests/responses) are sent between clien
 
 ## 🚀 Project Architecture
 
-            +------------------+
-            |     Agent        |
-            | (LangChain/Groq) |
-            +------------------+
-                    |
-                    | Uses
-            +------------------+
-            | MultiServerMCP   |
-            +------------------+
-             /              \\
-  (stdio/local)         (HTTP/SSE)
-   mathserver.py       search.py
+                        +------------------+
+                        |     Agent        |
+                        | (LangChain/Groq) |
+                        +------------------+
+                                |
+                                | Uses
+                        +------------------+
+                        | MultiServerMCP   |
+                        +------------------+
+                        /              \\
+                (stdio/local)         (HTTP/SSE)
+                mathserver.py       search.py
 
 - `mathserver.py`: Implements math tools and communicates over **stdio**
 - `search.py`: Implements search tools and serves via **streamable HTTP**
