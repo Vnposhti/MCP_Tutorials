@@ -16,4 +16,3 @@ main.py
 uv.lock
 pyproject.toml
 test.ipynb
-mcp_architecture.png
